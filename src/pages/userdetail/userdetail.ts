@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ModalController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { ExaminationPage } from '../examination/examination';
+import{FeePage} from '../fee/fee';
+import {AttendancePage} from '../attendance/attendance';
+
 
 @IonicPage()
 @Component({
@@ -25,6 +28,12 @@ console.log('ionViewDidLoad UserdetailPage');
 getStudentId(studentId){
     this.navCtrl.push(ExaminationPage, studentId);
 
+}
+getFeeStudent(studentId){
+    this.navCtrl.push(FeePage, studentId);  
+}
+getAttendanceStudent(studentId){
+    this.navCtrl.push(AttendancePage, studentId )
 }
 
 }

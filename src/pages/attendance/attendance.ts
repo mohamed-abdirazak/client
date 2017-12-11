@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 /**
- * Generated class for the FeePage page.
+ * Generated class for the AttendancePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -15,18 +15,18 @@ import 'rxjs/add/operator/catch';
 
 @IonicPage()
 @Component({
-  selector: 'page-fee',
-  templateUrl: 'fee.html',
+  selector: 'page-attendance',
+  templateUrl: 'attendance.html',
 })
-export class FeePage {
-  fees:any [];
+export class AttendancePage {
+  attendances:any [];
   public stdId;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
     this.stdId = this.navParams.data;
-    this.getStdfee(this.stdId);
+    this.getStdAttendance(this.stdId);
   }
-  getStdfee(stdId){
-    const url = 'http://localhost:3000/fee';
+  getStdAttendance(stdId){
+    const url = 'http://localhost:3000/attendance';
     const headers = new Headers({ 'Content-Type': 'application/json' });
     this.http.post(url, {stdId}, { headers: headers })
     .map((response: Response) => response.json())
@@ -34,7 +34,7 @@ export class FeePage {
     .subscribe(
     data => {
     console.log(data);
-    this.fees = data;
+    this.attendances = data;
     
     },
     error => console.error(error)
@@ -42,7 +42,7 @@ export class FeePage {
     }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FeePage');
+    console.log('ionViewDidLoad AttendancePage');
   }
 
 }

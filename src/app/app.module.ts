@@ -10,8 +10,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import {LoginPage} from '../pages/login/login';
 import {SignupPage} from '../pages/signup/signup';
-import {UserdetailPage} from '../pages/userdetail/userdetail'
+import {UserdetailPage} from '../pages/userdetail/userdetail';
 import { ExaminationPage } from '../pages/examination/examination';
+import{FeePage} from '../pages/fee/fee';
+import{AttendancePage} from '../pages/attendance/attendance';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpService } from '../providers/http-service/http-service';
@@ -26,7 +28,9 @@ import { HttpService } from '../providers/http-service/http-service';
     LoginPage,
     SignupPage,
     UserdetailPage,
-    ExaminationPage
+    ExaminationPage,
+    FeePage,
+    AttendancePage
 
   ],
   imports: [
@@ -43,7 +47,9 @@ import { HttpService } from '../providers/http-service/http-service';
     LoginPage,
     SignupPage,
     UserdetailPage,
-    ExaminationPage
+    ExaminationPage,
+    FeePage,
+    AttendancePage
   ],
   providers: [
     StatusBar,

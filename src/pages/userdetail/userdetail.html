@@ -19,12 +19,12 @@
   <ion-card-content>
    
   <ion-item> ID: {{userDetail.ID}}
-      <button ion-button outline item-end icon-right (click)="getStudentId(userDetail.ID)">View Exam</button>
+    
   </ion-item>
   <ion-item>StudentName:<p> {{userDetail.studentname}}</p></ion-item>
   <ion-item> Mother: <p> {{userDetail.mothername}}</p> </ion-item>
   <ion-item>  Gender: {{userDetail.gender}}</ion-item>
-  <ion-item> DOB:<p> {{userDetail.dob}} </p> </ion-item>
+  <ion-item> DOB:  {{userDetail.dob |date}}</ion-item>
   <ion-item> POB: {{userDetail.pob}}</ion-item>
   <ion-item> Adress: {{userDetail.address}} </ion-item>
   <ion-item> Tellphone: {{userDetail.phone}}</ion-item>
@@ -58,7 +58,7 @@
       <ion-item> level: {{userDetail.level}}</ion-item>
       <ion-item> class: {{userDetail.classname}} </ion-item>
       <ion-item> section: {{userDetail.section}}</ion-item>
-      <ion-item> RegistrationDate:<p> {{userDetail.registrationdate}}</p></ion-item>
+      <ion-item> RegistrationDate:<p> {{userDetail.registrationdate |date}}</p></ion-item>
    
     </ion-card-content> 
 
@@ -70,8 +70,8 @@
   <ion-card><ion-card-header class="mainBack"> Main Information </ion-card-header>
            <ion-list>
                   <button ion-item (click)="getStudentId(userDetail.ID)"> <ion-icon name="ios-stats-outline" item-start ></ion-icon> Examination</button>
-                  <button ion-item><ion-icon name="ios-checkmark-circle-outline" item-start></ion-icon> Attendance</button>
-                  <button ion-item> <ion-icon name="ios-cash-outline" item-start></ion-icon>Financial</button>
+                  <button ion-item (click)="getAttendanceStudent(userDetail.ID)" ><ion-icon name="ios-checkmark-circle-outline" item-start></ion-icon> Attendance</button>
+                  <button ion-item (click)="getFeeStudent(userDetail.ID)"> <ion-icon name="ios-cash-outline" item-start></ion-icon>Financial</button>
                 <button ion-item> <ion-icon name="ios-chatboxes-outline" item-start></ion-icon> Give comment</button>
           </ion-list>
 </ion-card>
