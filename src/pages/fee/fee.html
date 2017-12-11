@@ -7,7 +7,7 @@
 <ion-header>
     
       <ion-navbar>
-        <ion-title>fee</ion-title>
+        <ion-title>Fee Details</ion-title>
       </ion-navbar>
     
     </ion-header>
@@ -25,7 +25,7 @@
     <ion-item> ID: {{fee.st_id}} </ion-item>
     <ion-item> Name:<p> {{fee.studentname}} </p></ion-item>
     <ion-item>  Recept NO : {{fee.recept_no}} </ion-item>
-    <ion-item>Date:<p> {{fee.date}} </p></ion-item>
+    <ion-item>Date:<p> {{fee.date | date}} </p></ion-item>
     <ion-item> Month: {{fee.month}} </ion-item>
     <ion-item>  Type: {{fee.money_type}} </ion-item>
     <ion-item> Letters: {{fee.letters}}  </ion-item>
