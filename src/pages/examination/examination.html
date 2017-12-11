@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ExaminationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Examination</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button outline class="exambutton">ID : {{stdId}}</button>
+  
+ 
+  <ion-card>
+      <ion-card-header>
+      </ion-card-header>
+      <ion-card-content *ngFor="let exam of exams" >
+          <ion-card-header class="mainBack"> Exam Details :  {{exam.term}}</ion-card-header>
+<ion-item> Term: {{exam.term}} </ion-item>
+<ion-item> Islamic: {{exam.islamic}} </ion-item>
+<ion-item>  Somali: {{exam.somali}} </ion-item>
+<ion-item>Arabic: {{exam.arabic}} </ion-item>
+<ion-item> English: {{exam.english}} </ion-item>
+<ion-item>  Math: {{exam.math}} </ion-item>
+<ion-item> Science: {{exam.science}}  </ion-item>
+<ion-item> Social: {{exam.social}}  </ion-item>    
+<ion-item> Geography: {{exam.geography}}</ion-item>
+<ion-item> History: {{exam.history}}</ion-item>
+<ion-item> Biology: {{exam.biology}}</ion-item>
+<ion-item> Chemistry: {{exam.chemistry}}</ion-item>
+<ion-item> Physics: {{exam.physics}}</ion-item>
+<ion-item> Discipline: {{exam.discipline}}</ion-item>
+     </ion-card-content>
+   </ion-card> 
+
+      <ion-card  *ngFor="let exam of exams">
+        <ion-card-header class="mainBack"> Grade information</ion-card-header>
+<ion-item> Term: {{exam.term}}</ion-item>
+<ion-item>Total: {{exam.total}} </ion-item>
+<ion-item>Average: {{exam.average}}%</ion-item>
+
+</ion-card>
+</ion-content>

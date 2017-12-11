@@ -1,0 +1,32 @@
+<ion-header>
+<ion-navbar color="primary">
+  <ion-title><h5>User Registration</h5></ion-title>
+  </ion-navbar>
+  </ion-header>
+  <ion-content> 
+      <img src="assets/imgs/logo3.png" height="170px" alt="img not found" >
+  <ion-card>
+  <form [formGroup]="signupForm" (ngSubmit)="signUp()"> 
+  <ion-item>
+  <ion-label floating>UserName:</ion-label>
+  <ion-input type="text" formControlName="username" [(ngModel)]="createUser.username" required></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label floating>Password:</ion-label>
+  <ion-input type="password" formControlName="password" [(ngModel)]="createUser.password" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Name:</ion-label>
+    <ion-input type="text" formControlName="name" [(ngModel)]="createUser.name" required></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label floating>Email:</ion-label>
+    <ion-input type="email" formControlName="email" [(ngModel)]="createUser.email" required></ion-input>
+    </ion-item> 
+    <button ion-button block type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+    </form>
+    <button ion-button block (click)="goTologin()">Login</button>
+    </ion-card>
+    </ion-content>
+    
+    

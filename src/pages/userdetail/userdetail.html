@@ -1,0 +1,83 @@
+
+
+<ion-header>
+  <ion-navbar color="accent">
+  <ion-buttons start>
+  <button ion-button icon-only>
+  <ion-icon name="contact"></ion-icon>
+  </button>
+  </ion-buttons>
+
+  <ion-title>Student Details</ion-title>
+  </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+<!-- -------------------------------------------------------------------------------------------- -->
+  <ion-card>
+  <ion-card-header class="stBack">Student Information</ion-card-header>
+  <ion-card-content>
+   
+  <ion-item> ID: {{userDetail.ID}}
+      <button ion-button outline item-end icon-right (click)="getStudentId(userDetail.ID)">View Exam</button>
+  </ion-item>
+  <ion-item>StudentName:<p> {{userDetail.studentname}}</p></ion-item>
+  <ion-item> Mother: <p> {{userDetail.mothername}}</p> </ion-item>
+  <ion-item>  Gender: {{userDetail.gender}}</ion-item>
+  <ion-item> DOB:<p> {{userDetail.dob}} </p> </ion-item>
+  <ion-item> POB: {{userDetail.pob}}</ion-item>
+  <ion-item> Adress: {{userDetail.address}} </ion-item>
+  <ion-item> Tellphone: {{userDetail.phone}}</ion-item>
+  <ion-item> Nationality: {{userDetail.nationality}} </ion-item>
+ 
+</ion-card-content>
+
+  </ion-card>
+
+  <!-- -------------------------------------------------------------------------------------------- -->
+    <ion-card>
+        <ion-card-header class="guBack">Guardian Information</ion-card-header>
+   
+       
+  <ion-card-content>
+    <ion-item> Name: <p> {{userDetail.guardianname}}</p> </ion-item>
+    <ion-item> Relation: {{userDetail.guardianrelation}}</ion-item>
+    <ion-item> Occupation: <p> {{userDetail.guardianoccupation}}</p> </ion-item>
+    <ion-item> Tellphone: <p> {{userDetail.guardiantell}}</p></ion-item>
+  </ion-card-content> 
+
+  </ion-card>
+<!-- ------------------------------------------------------------------------------------------------- -->
+  <ion-card >          
+  <ion-card-header class="schBack" > School Information </ion-card-header>
+
+
+    <ion-card-content>
+
+      <ion-item> Branch: {{userDetail.branch}} </ion-item>
+      <ion-item> level: {{userDetail.level}}</ion-item>
+      <ion-item> class: {{userDetail.classname}} </ion-item>
+      <ion-item> section: {{userDetail.section}}</ion-item>
+      <ion-item> RegistrationDate:<p> {{userDetail.registrationdate}}</p></ion-item>
+   
+    </ion-card-content> 
+
+  </ion-card>
+  <!-- ------------------------------------------------------------------------------------------------- -->
+  
+  
+  <!-- -------------------------------------------------------------------------------------------------- -->
+  <ion-card><ion-card-header class="mainBack"> Main Information </ion-card-header>
+           <ion-list>
+                  <button ion-item (click)="getStudentId(userDetail.ID)"> <ion-icon name="ios-stats-outline" item-start ></ion-icon> Examination</button>
+                  <button ion-item><ion-icon name="ios-checkmark-circle-outline" item-start></ion-icon> Attendance</button>
+                  <button ion-item> <ion-icon name="ios-cash-outline" item-start></ion-icon>Financial</button>
+                <button ion-item> <ion-icon name="ios-chatboxes-outline" item-start></ion-icon> Give comment</button>
+          </ion-list>
+</ion-card>
+    
+</ion-content>
+  
+  
+  
+    

@@ -1,0 +1,31 @@
+
+
+<ion-header>
+  <ion-navbar color="primary">
+  <ion-title>login</ion-title>
+  <ion-buttons end>
+      <button style="color: rgb(240, 225, 26)" ion-button icon-only (click)="openModal()">
+      <ion-icon name="add-circle"></ion-icon>
+      </button>
+      </ion-buttons>
+  </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+  <img src="assets/imgs/logo3.png" alt="img not found">
+  
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+  <ion-list>
+  <ion-item>
+  <ion-label floating>Username</ion-label>
+  <ion-input type="text" formControlName="username" [(ngModel)]="user.username" required></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label floating>Password</ion-label>
+  <ion-input type="password" formControlName="password" [(ngModel)]="user.password" required></ion-input>
+  </ion-item>
+  <!-- Change this to a button or input when using this as a form -->
+  <button type="submit" ion-button block color="primary-pale" [disabled]="!loginForm.valid">Login</button>
+  </ion-list>
+  </form>
+  </ion-content>
+  
