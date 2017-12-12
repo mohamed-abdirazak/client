@@ -35,7 +35,7 @@ public viewCtrl: ViewController,private formBuilder: FormBuilder,private authSer
     error => console.error(error));
     let alert = this.alerCtrl.create({
       title: 'User Added!',
-      message: 'You successfully To register: Enter your Username and password the Login',
+      message: 'You successfully To register: Enter your Username and password then Login',
       buttons: ['Ok']
     });
     alert.present()
