@@ -4,6 +4,7 @@ import { SignupPage } from '../signup/signup';
 import { ExaminationPage } from '../examination/examination';
 import{FeePage} from '../fee/fee';
 import {AttendancePage} from '../attendance/attendance';
+import {CommentPage} from '../comment/comment'
 
 
 @IonicPage()
@@ -34,6 +35,9 @@ getFeeStudent(studentId){
 }
 getAttendanceStudent(studentId){
     this.navCtrl.push(AttendancePage, studentId )
+}
+giveStdComment(studentId){
+    this.navCtrl.push(CommentPage, studentId )   
 }
 
 }

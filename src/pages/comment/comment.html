@@ -1,0 +1,42 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Comments</ion-title>
+    </ion-navbar>
+    <img src="assets/imgs/logo3.png" height="170PX" alt="img not found">
+  </ion-header>
+  
+  
+  <ion-content padding>
+
+     <ion-card>
+     
+          <form [formGroup]="CommentForm" (ngSubmit)="Addcomment()" > 
+             
+            <ion-item >
+          <ion-label class="initialSize" stacked>ID:</ion-label>
+          <ion-input type="number" readonly formControlName="ID" [(ngModel)]="createUser.ID" value="{{stdId}}"  required>{{stdId}}</ion-input>
+          </ion-item>
+          <ion-item>
+          <ion-label class="initialSize" stacked>Name:</ion-label>
+          <ion-input type="text" formControlName="name" [(ngModel)]="createUser.name"  required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="initialSize" stacked>Phone:</ion-label>
+            <ion-input type="number" formControlName="phone" [(ngModel)]="createUser.phone" required></ion-input>
+            </ion-item>
+          <ion-item>
+            <ion-label class="initialSize" stacked>Date:</ion-label>
+            <ion-input type="date" formControlName="date" [(ngModel)]="createUser.date" required></ion-input>
+            </ion-item>
+            <ion-label class="initialSize" stacked>Comment:</ion-label>
+            <ion-item class="udpateBox">
+                <textarea  placeholder="Enter Your Comments"  formControlName="comment" [(ngModel)]="createUser.comment" required></textarea>
+              </ion-item>
+            <button ion-button block type="submit" rows="6" [disabled]="!CommentForm.valid" >Comment</button>
+            </form>   
+          </ion-card>
+    </ion-content>
+  
+  

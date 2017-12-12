@@ -14,6 +14,7 @@ import {UserdetailPage} from '../pages/userdetail/userdetail';
 import { ExaminationPage } from '../pages/examination/examination';
 import{FeePage} from '../pages/fee/fee';
 import{AttendancePage} from '../pages/attendance/attendance';
+import {CommentPage} from '../pages/comment/comment'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpService } from '../providers/http-service/http-service';
@@ -30,7 +31,8 @@ import { HttpService } from '../providers/http-service/http-service';
     UserdetailPage,
     ExaminationPage,
     FeePage,
-    AttendancePage
+    AttendancePage,
+    CommentPage
 
   ],
   imports: [
@@ -49,7 +51,8 @@ import { HttpService } from '../providers/http-service/http-service';
     UserdetailPage,
     ExaminationPage,
     FeePage,
-    AttendancePage
+    AttendancePage,
+    CommentPage
   ],
   providers: [
     StatusBar,

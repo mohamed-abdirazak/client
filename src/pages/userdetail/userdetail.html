@@ -72,7 +72,7 @@
                   <button ion-item (click)="getStudentId(userDetail.ID)"> <ion-icon name="ios-stats-outline" item-start ></ion-icon> Examination</button>
                   <button ion-item (click)="getAttendanceStudent(userDetail.ID)" ><ion-icon name="ios-checkmark-circle-outline" item-start></ion-icon> Attendance</button>
                   <button ion-item (click)="getFeeStudent(userDetail.ID)"> <ion-icon name="ios-cash-outline" item-start></ion-icon>Financial</button>
-                <button ion-item> <ion-icon name="ios-chatboxes-outline" item-start></ion-icon> Give comment</button>
+                  <button ion-item (click)="giveStdComment(userDetail.ID)"> <ion-icon name="ios-chatboxes-outline" item-start></ion-icon> Give comment</button>
           </ion-list>
 </ion-card>
     
